@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Guzal Estetika — Andijonda 2020-yildan beri ishlaydigan kosmetologiya markazi. Hijoma (Misr uslubida), chistka, botoks, browlifting, mezoterapiya, epilyatsiya, PRP va kosmetologiya kurslari." />
+  <title>Guzal Estetika — Kosmetologiya & Hijoma | Andijon</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #263238;
+      background-color: #f8faf8; /* yengil yashilsoch fon */
+    }
+    h1, h2, h3, h4 { font-weight: 700; color: #1b5e20; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+    :root {
+      --green: #2e7d32;
+      --green-dark: #1b5e20;
+      --green-light: #4caf50;
+      --blue-accent: #2196f3; /* chiroyli ko'k rang */
+      --gray: #607d8b;
+      --white: #ffffff;
+      --shadow: 0 6px 16px rgba(0,0,0,0.06);
+      --shadow-hover: 0 10px 24px rgba(33,150,243,0.2);
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--green), #388e3c);
+      color: var(--white);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .site-title { font-size: 2rem; font-weight: 800; }
+    .slogan { font-size: 1.1rem; opacity: 0.95; margin-top: 8px; }
+
+    .hero {
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://i.ibb.co/G3MBXL60/photo-2025-11-06-12-15-32.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-content { max-width: 700px; padding: 0 20px; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.3rem; margin-bottom: 28px; }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow);
+    }
+    .btn-primary {
+      background: var(--white);
+      color: var(--green-dark);
+    }
+    .btn-primary:hover {
+      background: #e8f5e9;
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    section { padding: 70px 0; }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 3px;
+      background: var(--green);
+      margin: 10px auto;
+      border-radius: 3px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 28px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.35s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+    .service-img {
+      height: 200px;
+      overflow: hidden;
+      border-bottom: 3px solid var(--blue-accent); /* CHIROYLI KO'K CHIZIQ */
+    }
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .service-card:hover .service-img img {
+      transform: scale(1.05);
+    }
+    .service-content {
+      padding: 24px;
+    }
+    .service-content h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+      color: var(--green-dark);
+    }
+
+    .courses {
+      background: #eef7ee;
+    }
+    .course-card {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .course-features li {
+      margin: 14px 0;
+      padding-left: 32px;
+      position: relative;
+    }
+    .course-features li::before {
+      content: '🎓';
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+    }
+
+    .hijoma { background-color: #f1f9f1; }
+    .hijoma-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+    .hijoma-text { flex: 1; min-width: 300px; }
+    .hijoma-img {
+      flex: 1;
+      min-width: 300px;
+      height: 280px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .hijoma-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact { background: var(--white); text-align: center; }
+    .contact-info { max-width: 650px; margin: 0 auto; }
+    .phone {
+      display: block;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 14px 0;
+      padding: 12px;
+      background: #e8f5e9;
+      border-radius: 12px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .time { font-style: italic; color: var(--gray); margin-bottom: 28px; }
+
+    .social-btns {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .btn-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-width: 220px;
+      padding: 14px 20px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      border-radius: 14px;
+      color: white;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+    }
+    .btn-telegram {
+      background: linear-gradient(135deg, #0088cc, #00b2ff);
+    }
+    .btn-instagram {
+      background: linear-gradient(135deg, #e1306c, #f56099);
+    }
+    .btn-social:hover {
+      transform: translateY(-4px);
+      opacity: 0.95;
+    }
+    .icon { width: 24px; height: 24px; }
+
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      padding: 28px 0;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero { height: 360px; }
+      .hero h1 { font-size: 2.2rem; }
+      .section-title { font-size: 1.8rem; }
+      .hijoma-content { flex-direction: column; }
+      .social-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="site-title">Guzal Estetika</div>
+    <div class="slogan">2020-yildan beri — go‘zallik va sog‘lomlik uchun ishonchli hamroh</div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Kosmetologiya, Hijoma & Kurslar</h1>
+      <p>Andijonda professional xizmatlar — bepul konsultatsiya bilan!</p>
+      <a href="https://t.me/guzal_estetika" class="btn btn-primary">📞 Bepul konsultatsiya olish</a>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Xizmatlar</h2>
+      <div class="services-grid">
+        <!-- Kosmetolog rasmi — endi xizmat kabi katta emas, balki karta shaklida -->
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://i.ibb.co/PsBx97gX/Remove-bg-ai-1762366189507.png" alt="Kosmetolog Guzal">
+          </div>
+          <div class="service-content">
+            <h3>Kosmetolog</h3>
+            <p>2020-yildan beri tajribali mutaxassis — individual yondashuv har bir mijozga.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://i.ibb.co/S7XJt6BD/2148853850.jpg" alt="Chistka">
+          </div>
+          <div class="service-content">
+            <h3>Toza qilish (Chistka)</h3>
+            <p>Terining chuqur tozalanishi, poralarning tozalash va tonusini yaxshilash.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://i.ibb.co/xtV80Qhz/photo-2025-11-06-12-16-03.jpg" alt="Botoks">
+          </div>
+          <div class="service-content">
+            <h3>Botoks / Dysport</h3>
+            <p>Yuzdagi arralamalarni yumshatish, yoshlik ifodasini saqlash.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://i.ibb.co/cXcGjZ4R/photo-2025-11-06-12-15-32.jpg" alt="Browlifting">
+          </div>
+          <div class="service-content">
+            <h3>Browlifting</h3>
+            <p>Ko‘z qoshlarini ko‘tarish, ifodani yangilash — tabiiy natija.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://i.ibb.co/pBKgygWG/2148875438.jpg" alt="Mezoterapiya">
+          </div>
+          <div class="service-content">
+            <h3>Mezoterapiya</h3>
+            <p>Vitaminlar, antioksidantlar bilan terini sog‘lom qilish.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://i.ibb.co/ZRpVTjSr/2148070344.jpg" alt="Hijoma">
+          </div>
+          <div class="service-content">
+            <h3>Misr uslubidagi Hijoma</h3>
+            <p>Toksik moddalarni chiqarish, immunitetni mustahkamlash.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses">
+    <div class="container">
+      <h2 class="section-title">Kosmetologiya Kurslari</h2>
+      <div class="course-card">
+        <h3>Professional O‘qitish</h3>
+        <p>90% amaliyot, 10% nazariya — haqiqiy mijozlar ustida ishlash.</p>
+        <ul class="course-features">
+          <li>Davlat namunasi asosidagi sertifikat</li>
+          <li>Guruhlarda (4–6 kishi) yoki shaxsiy tarzda</li>
+          <li>Ishga joylashishda yordam</li>
+        </ul>
+        <a href="https://t.me/guzal_estetika" class="btn btn-primary">📩 Kurs haqida</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hijoma">
+    <div class="container">
+      <h2 class="section-title">Misr uslubidagi Hijoma</h2>
+      <div class="hijoma-content">
+        <div class="hijoma-text">
+          <p>Hijoma — qadimiy sog‘lomlashtirish san’ati. Vakuum yordamida toksinlarni chiqarish, qon aylanishini yaxshilash va immunitetni mustahkamlashning tabiiy usuli.</p>
+          <ul style="margin-top:20px; padding-left:24px;">
+            <li>✓ Og‘riqni kamaytirish</li>
+            <li>✓ Energani oshirish</li>
+            <li>✓ Steril sharoitda</li>
+          </ul>
+        </div>
+        <div class="hijoma-img">
+          <img src="https://i.ibb.co/ZRpVTjSr/2148070344.jpg" alt="Hijoma jarayoni">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">Bog‘lanish</h2>
+      <div class="contact-info">
+        <p><strong>📍 Andijon, Semashko ko‘chasi</strong></p>
+        <a href="tel:+998905444744" class="phone">+998 90 544 47 44</a>
+        <a href="tel:+998972322030" class="phone">+998 97 232 20 30</a>
+        <p class="time">🕗 9:00 – 17:00 (Dush–Shan)</p>
+
+        <div class="social-btns">
+          <a href="https://t.me/guzal_estetika" class="btn btn-social btn-telegram">
+            <svg class="icon" viewBox="0 0 24 24" fill="white">
+              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 8.46c-.18-.06-.42-.06-.54-.06-.12 0-.24.06-.48.24L14.58 10.2l4.2 3.96c.18.18.3.36.3.6 0 .24-.06.42-.18.54-.12.12-.3.18-.48.18-.18 0-.36-.06-.54-.12l-4.8-2.76-2.22 2.1c-.18.12-.3.18-.48.18-.18 0-.36-.06-.48-.18-.24-.24-.3-.48-.24-.72l.36-4.26-3.78-2.58c-.18-.12-.3-.36-.3-.54 0-.24.18-.48.42-.54.24-.18.48-.18.72 0l4.92 3.12 1.86-1.74c.12-.12.3-.18.48-.18.18 0 .36.06.48.18.24.24.3.48.18.72l-1.14 4.56 4.38-3.96c.24-.18.48-.3.72-.3.24 0 .42.06.54.18.24.24.3.48.18.72z"/>
+            </svg>
+            Telegram
+          </a>
+          <a href="https://instagram.com/guzal_estetika" class="btn btn-social btn-instagram">
+            <svg class="icon" viewBox="0 0 24 24" fill="white">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            Instagram
+          </a>
+        </div>
+
+        <a href="https://t.me/guzal_estetika" class="btn btn-primary">✅ Bepul konsultatsiya</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      &copy; 2020–2025 Guzal Estetika • Andijon
+    </div>
+  </footer>
+
+</body>
+</html>
